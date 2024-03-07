@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>PDF Downloader Result</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f2f2f2;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        h1 {
+            text-align: center;
+            color: #333;
+            font-size: 36px;
+            margin-bottom: 20px;
+        }
+
+        p {
+            text-align: center;
+            font-size: 18px;
+            margin-bottom: 20px;
+            color: #444;
+        }
+
+        h2 {
+            text-align: center;
+            color: #007bff;
+            font-size: 24px;
+            margin-bottom: 10px;
+        }
+
+        ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            width: 80%;
+        }
+
+        li {
+            margin-bottom: 15px;
+            padding: 15px;
+            background-color: #fff;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        li a {
+            color: #007bff;
+            text-decoration: none;
+        }
+
+        li a:hover {
+            color: #0069d9;
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <h1>PDF Downloader Result</h1>
+    <p>PDF URL: <a href="{{ pdf_url }}">{{ pdf_url }}</a></p>
+
+    <h2>Summaries</h2>
+    <ul>
+        {% for summary in summaries %}
+            <li>{{ summary }}</li>
+        {% endfor %}
+    </ul>
+</body>
+</html>
